@@ -1,1 +1,1 @@
-worker: python 파일이름.py
+worker: python 디스코드봇.py
