@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -35,8 +36,9 @@ async def on_message(message):
         await message.channel.send("통에 설탕 6팩과 이스트 하나를 넣고 물을 채우고 기다린다")
     if message.content.startswith("/질문-하요시코사라짐") or message.content.startswith("하요시코 없어짐"):
         await message.channel.send("키를 받은 상태에서 자고 일어나면 마을에있는 검사소 옆에 주차되어있다.")
-        
-client.run("OTIwODk3NzkwMjYyMDA5ODk2.YbrC5g.epy_yC69pLjC6PGihXeoMd1nQdw")
+
+access_token = os.environ["BOT_TOKEN"]        
+client.run(access_token)
 
 
 #if message.content.startswith(""):
